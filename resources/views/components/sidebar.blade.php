@@ -92,6 +92,15 @@
                         </a>
                     </li>
                 @endcan
+                @can('service_access')
+                    <li class="items-center">
+                        <a class="{{ request()->is("admin/services*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="{{ route("admin.samplegallery.index") }}">
+                            <i class="fa-fw c-sidebar-nav-icon fas fa-gavel">
+                            </i>
+                            {{ trans('Sample Gallery') }}
+                        </a>
+                    </li>
+                @endcan
                 @can('blogs_management_access')
                     <li class="items-center">
                         <a class="has-sub {{ request()->is("admin/categories*")||request()->is("admin/tags*")||request()->is("admin/posts*") ? "sidebar-nav-active" : "sidebar-nav" }}" href="#" onclick="window.openSubNav(this)">

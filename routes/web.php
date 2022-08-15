@@ -63,6 +63,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::post('services/media', [ServiceController::class, 'storeMedia'])->name('services.storeMedia');
     Route::resource('services', ServiceController::class, ['except' => ['store', 'update', 'destroy']]);
 
+    //sample gallery by saeed
+    Route::post('samplegallery/media', [\App\Http\Controllers\Admin\SampleGalleryController::class, 'storeMedia'])->name('samplegallery.storeMedia');
+    Route::resource('samplegallery', \App\Http\Controllers\Admin\SampleGalleryController::class, ['except' => ['store', 'update', 'destroy']]);
+
     // Contact
     Route::resource('contacts', ContactController::class, ['except' => ['store', 'update', 'destroy', 'edit']]);
 

@@ -28,6 +28,7 @@
                          <li class="nav-item"><a href="{{route('services')}}" class="nav-link ">Services</a></li>
                          <li class="nav-item"><a href="{{route('blogs')}}" class="nav-link ">Blogs</a></li>
                         <li class="nav-item"><a href="{{ route('contact')}}" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="{{ route('contact')}}" class="nav-link">SampleGallary</a></li>
                         </ul>
                         <div class="others-options">
                             <div class="burger-menu">
